@@ -32,13 +32,13 @@ struct ProductsView: View {
                     .font(.headline)
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                if productManager.productsErrorMessage.isEmpty {
-                    Button {
-                        filterActivated = true
-                    } label: {
-                        Text("Filter")
-                    }
-                    .confirmationDialog("", isPresented: $filterActivated) {
+                Button {
+                    filterActivated = true
+                } label: {
+                    Text("Filter")
+                }
+                .confirmationDialog("", isPresented: $filterActivated) {
+                    if productManager.productsErrorMessage.isEmpty {
                         if !filterValue.isEmpty {
                             Button("Cancel filter \(filterValue)", role: .destructive) {
                                 filterValue = ""
@@ -53,9 +53,9 @@ struct ProductsView: View {
                                 }
                             }
                         }
+                    } else {
+                        MainError(errorMessage: productManager.productCategoriesErrorMessage)
                     }
-                } else {
-                    MainError(errorMessage: productManager.productCategoriesErrorMessage)
                 }
             }
         }
