@@ -6,8 +6,6 @@ Simple Products-App created in Swift + SwiftUI.
 
 Firstly install all necessary pods with:
 
-```
-pod install
-```
+`pod install`
 
 then run the project.
