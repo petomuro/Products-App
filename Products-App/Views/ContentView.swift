@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var productManager = ProductManager();
-    @StateObject private var productDetailManager = ProductDetailManager();
+    @StateObject private var productManager = ProductManager()
+    @StateObject private var productDetailManager = ProductDetailManager()
     
     var body: some View {
         MainView()

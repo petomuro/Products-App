@@ -10,15 +10,15 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         NavigationView {
-            ProductView()
+            ProductsView()
         }
         .navigationViewStyle(.stack)
     }
 }
 
 struct MainView_Previews: PreviewProvider {
-    @StateObject static var productManager = ProductManager();
-    @StateObject static var productDetailManager = ProductDetailManager();
+    @StateObject static var productManager = ProductManager()
+    @StateObject static var productDetailManager = ProductDetailManager()
     
     static var previews: some View {
         MainView()
